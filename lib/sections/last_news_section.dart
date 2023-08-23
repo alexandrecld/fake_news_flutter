@@ -1,3 +1,4 @@
+import 'package:fake_news/widgets/uppercase_text.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_news/constantes.dart';
 import '../models/responsive.dart';
@@ -24,12 +25,26 @@ class LastNewsSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 100),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TitleText(
-                label: "LES DERNIÈRES FAKE NEWS !",
-                fSize: 40,
+              UppercaseText(
+                "Les dernières",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 40,
+                  letterSpacing: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              UppercaseText(
+                " Fake news !",
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 40,
+                  letterSpacing: 10,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),
@@ -47,12 +62,12 @@ class LastNewsSection extends StatelessWidget {
 
   Widget adaptedToSize(bool small, Size size) {
     List<Widget> widgets =
-    lastNews.map((e) => LastNewsWidget(size: size, lastNews: e)).toList();
+        lastNews.map((e) => LastNewsWidget(size: size, lastNews: e)).toList();
     return (small)
         ? Column(children: widgets)
         : Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: widgets,
-    );
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: widgets,
+          );
   }
 }

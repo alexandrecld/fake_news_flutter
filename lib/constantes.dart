@@ -19,10 +19,11 @@ String redLeafImage = "images/pic07.jpg";
 Color whiteColor = const Color.fromRGBO(255, 255, 255, 1);
 
 List<ButtonObject> menuButton = [
-  ButtonObject(text: "Rembobiner", destination: const MainPage()),
-  ButtonObject(text: "Truc en toc", destination: const MainPage()),
-  ButtonObject(text: "Rouages", destination: const MainPage()),
+  ButtonObject(text: "Rembobiner", icon: Icons.home, destination: const MainPage()),
+  ButtonObject(text: "Truc en toc", icon: Icons.bar_chart, destination: const MainPage()),
+  ButtonObject(text: "Rouages", icon: Icons.settings, destination: const MainPage()),
 ];
+
 
 List<HoverButton> menuButtonHover() =>
     menuButton.map((button) => HoverButton(buttonObject: button)).toList();
@@ -33,25 +34,11 @@ List<LastNews> lastNews = [
   LastNews(name: "Cérisier alien", text: "EXCLUSIF ! Les aliens sont parmi nous ! Ils se cachent dans les cerisiers déguisés en fleurs. L'interview exclusive de Bob l'extraterrestre", path: cherryTreeImage),
 ];
 
-List<ButtonObject> containerButton = [
-  ButtonObject(
-      text: "Téléphone",
-      icon: const Icon(Icons.phone),
-      destination: const ContactSection()),
-  ButtonObject(
-      text: "Mail",
-      icon: const Icon(Icons.mail),
-      destination: const ContactSection()),
-  ButtonObject(
-      text: "Visio",
-      icon: const Icon(Icons.home),
-      destination: const ContactSection()),
-];
-
 List<UrlClass> networks = [
-  UrlClass(name: "Facebook", url: "https://www.facebook.com/"),
-  UrlClass(name: "Instagram", url: "https://www.instagram.com/"),
-  UrlClass(name: "Twitter", url: "https://www.twitter.com/"),
+  UrlClass(name: "@Fakenews", url: "https://www.twitter.com/@Fakenews", iconAsset: "icons/twitter.png"),
+  UrlClass(name: "instagram.com/fake-news", url: "https://www.instagram.com/fake-news", iconAsset: "icons/instagram.png"),
+  UrlClass(name: "dribbble.com/fake-news", url: "https://www.dribbble.com/fake-news", iconAsset: "icons/dribbble.png"),
+  UrlClass(name: "facebook.com/fake-news", url: "https://www.facebook.com/fake-news", iconAsset: "icons/facebook.png"),
 ];
 
 List<UrlButton> getSocialButtons() =>

@@ -11,13 +11,23 @@ class UrlButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Uri uri = Uri.parse(urlClass.url);
 
-    return TextButton(
+    return TextButton.icon(
       onPressed: () async {
         await canLaunchUrl(uri)
             ? launchUrl(uri, mode: LaunchMode.externalApplication)
             : throw "Impossible de lancer ${urlClass.name}";
       },
-      child: Text(urlClass.name),
+      icon: CircleAvatar(
+        radius: 16,
+        backgroundColor: Colors.grey,
+        child: Image.asset(
+          urlClass.iconAsset,
+          color: Colors.white,
+          height: 16,
+          width: 16,
+        ),
+      ),
+      label: Text(urlClass.name),
     );
   }
 }

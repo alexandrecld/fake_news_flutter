@@ -17,10 +17,11 @@ class WebBar extends PreferredSize {
                 children: [
                   const Branding(),
                   Expanded(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: menuButtonHover(),
-                  ))
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: menuButtonHover(),
+                    ),
+                  )
                 ],
               ),
             ));

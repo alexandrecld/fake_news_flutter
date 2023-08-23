@@ -1,3 +1,4 @@
+import 'package:fake_news/widgets/uppercase_text.dart';
 import 'package:flutter/material.dart';
 
 class ContainerText extends StatelessWidget {
@@ -17,18 +18,26 @@ class ContainerText extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 140),
-              const Text(
-                "F A K E  N E W S  I I",
+              const UppercaseText(
+                "Fake news ii",
                 style: TextStyle(
                   color: Colors.deepOrange,
+                  letterSpacing: 15,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 0.1,
+                      color: Colors.grey,
+                      offset: Offset(3.0, 3.0),
+                    ),
+                  ],
                   fontSize: 70,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 140),
-              const Text(
-                "IL REVIENT ET IL EST PAS CONTENT ! \n MYTHONÉ EN PHP ET MYSQL",
+              const UppercaseText(
+                "Il revient et il est pas content ! \n mythoné en php et mysql",
                 style: TextStyle(
                   color: Colors.black45,
                   fontSize: 30,
@@ -45,7 +54,6 @@ class ContainerText extends StatelessWidget {
                   ),
                 ),
               ),
-              // const SizedBox(height: 1),
             ],
           ),
         ),

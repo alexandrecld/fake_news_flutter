@@ -12,39 +12,6 @@ class LastNewsWidget extends StatefulWidget {
   State<LastNewsWidget> createState() => _EventWidgetState();
 }
 
-// class _EventWidgetState extends State<LastNewsWidget> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: const EdgeInsets.all(20),
-//       child: Column(
-//         children: [
-//           SizedBox(
-//             height: widget.size.height,
-//             width: widget.size.width,
-//             child: ClipRRect(
-//               borderRadius: BorderRadius.circular(25),
-//               child: Image.asset(
-//                 widget.lastNews.path,
-//                 fit: BoxFit.cover,
-//               ),
-//             ),
-//           ),
-//           const Padding(padding: EdgeInsets.only(bottom: 10)),
-//           Text(
-//             widget.lastNews.name,
-//             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
-//           ),
-//           const Padding(padding: EdgeInsets.only(bottom: 20)),
-//           Text(widget.lastNews.text,
-//               style:
-//                   const TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 class _EventWidgetState extends State<LastNewsWidget> {
   @override
   Widget build(BuildContext context) {
@@ -63,7 +30,7 @@ class _EventWidgetState extends State<LastNewsWidget> {
               ),
             ),
           ),
-          const Padding(padding: EdgeInsets.only(bottom: 10)),
+          const Padding(padding: EdgeInsets.only(bottom: 100)),
           Text(
             widget.lastNews.name,
             style: const TextStyle(
@@ -71,7 +38,7 @@ class _EventWidgetState extends State<LastNewsWidget> {
                 fontWeight: FontWeight.bold,
                 fontSize: 40),
           ),
-          const Padding(padding: EdgeInsets.only(bottom: 20)),
+          const Padding(padding: EdgeInsets.only(bottom: 60)),
           SizedBox(
             width: widget.size.width * 0.8,
             child: Text(

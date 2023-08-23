@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ButtonObject {
-  String? text;
-  Icon? icon;
-  Widget destination;
+  final String text;
+  final IconData icon;
+  final Widget destination;
 
-  ButtonObject({this.text, this.icon, required this.destination});
+  ButtonObject({required this.text, required this.icon, required this.destination});
 }
