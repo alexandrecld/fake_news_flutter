@@ -13,39 +13,45 @@ class ContainerTextImage extends StatelessWidget {
       child: Container(
         height: size.height / 2,
         width: size.width,
-        decoration: BoxDecoration(
-          border: const Border(
+        decoration: const BoxDecoration(
+          border: Border(
             top: BorderSide(
                 color: Colors.grey, width: 1.0, style: BorderStyle.solid),
             bottom: BorderSide(
                 color: Colors.grey, width: 1.0, style: BorderStyle.solid),
           ),
-          image: DecorationImage(
-              image: AssetImage(bannerImage), fit: BoxFit.cover),
+          color: Colors.white,
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 50, right: 50),
-            child: RichText(
-              textAlign: TextAlign.justify,
-              text: const TextSpan(
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  letterSpacing: 5,
-                ),
-                children: <TextSpan>[
-                  TextSpan(
-                    text:
-                        '"ON PEUT TROMPER UNE FOIS MILLES PERSONNES, \n MAIS ON NE PEUT PAS TROMPER MILLE FOIS UNE \n PERSONNE." - ',
+        child: Container(
+          margin: const EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(bannerImage), fit: BoxFit.cover),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 50, right: 50),
+              child: RichText(
+                textAlign: TextAlign.justify,
+                text: const TextSpan(
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    letterSpacing: 5,
                   ),
-                  TextSpan(
-                    text: 'ÉMILE',
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text:
+                          '"ON PEUT TROMPER UNE FOIS MILLES PERSONNES, \n MAIS ON NE PEUT PAS TROMPER MILLE FOIS UNE \n PERSONNE." - ',
                     ),
-                  ),
-                ],
+                    TextSpan(
+                      text: 'ÉMILE',
+                      style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

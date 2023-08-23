@@ -17,6 +17,15 @@ String globeImage = "images/pic06.jpg";
 String redLeafImage = "images/pic07.jpg";
 
 Color whiteColor = const Color.fromRGBO(255, 255, 255, 1);
+Color fondGris = const Color.fromRGBO(240, 240, 240, 1);
+Color fondSombre = const Color.fromRGBO(68, 68, 68, 1);
+Color orange = const Color.fromRGBO(237, 120, 106, 1);
+Color orangeHover = const Color.fromRGBO(253, 136, 122, 1);
+Color rouge = const Color.fromRGBO(204, 0, 0, 1);
+Color grisLeger = const Color.fromRGBO(229, 229, 229, 1);
+Color grisMoyen = const Color.fromRGBO(119, 119, 119, 1);
+Color gris = const Color.fromRGBO(102, 102, 102, 1);
+Color grisSombre = const Color.fromRGBO(60, 60, 60, 1);
 
 List<ButtonObject> menuButton = [
   ButtonObject(text: "Rembobiner", icon: Icons.home, destination: const MainPage()),
@@ -28,9 +37,9 @@ List<HoverButton> menuButtonHover() =>
     menuButton.map((button) => HoverButton(buttonObject: button)).toList();
 
 List<LastNews> lastNews = [
-  LastNews(name: "Comment ranger un livre ?", text: "On vous ment depuis le début, il faut ranger les livres sur la tranche, c'est meilleur pour la santé mentale. Le témoignage exlusif de Robert, dictionnaire de français", path: booksImage),
-  LastNews(name: "Huile de palmipède", text: "Des chercheurs ont découvert qu'à cause de l'huile de palme quelle contient, une consommation excessive de pâte à tartiner provoquerait une mutation du pied en pâte de canard. Les photos exclusives ici !", path: nutellaToastImage),
-  LastNews(name: "Cérisier alien", text: "EXCLUSIF ! Les aliens sont parmi nous ! Ils se cachent dans les cerisiers déguisés en fleurs. L'interview exclusive de Bob l'extraterrestre", path: cherryTreeImage),
+  LastNews(date: "28/07/2020 08:57", name: "Comment ranger un livre ?", text: "On vous ment depuis le début, il faut ranger les livres sur la tranche, c'est meilleur pour la santé mentale. Le témoignage exlusif de Robert, dictionnaire de français", path: booksImage),
+  LastNews(date: "26/07/2020 09:14", name: "Huile de palmipède", text: "Des chercheurs ont découvert qu'à cause de l'huile de palme quelle contient, une consommation excessive de pâte à tartiner provoquerait une mutation du pied en pâte de canard. Les photos exclusives ici !", path: nutellaToastImage),
+  LastNews(date: "14/07/2020 12:18", name: "Cérisier alien", text: "EXCLUSIF ! Les aliens sont parmi nous ! Ils se cachent dans les cerisiers déguisés en fleurs. L'interview exclusive de Bob l'extraterrestre", path: cherryTreeImage),
 ];
 
 List<UrlClass> networks = [

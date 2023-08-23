@@ -1,3 +1,4 @@
+import 'package:fake_news/constantes.dart';
 import 'package:fake_news/models/last_news.dart';
 import 'package:flutter/material.dart';
 
@@ -19,18 +20,38 @@ class _EventWidgetState extends State<LastNewsWidget> {
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
-          SizedBox(
-            height: widget.size.height,
-            width: widget.size.width,
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: grisLeger, width: 5.0),
+              borderRadius: BorderRadius.circular(3.0),
+            ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
               child: Image.asset(
                 widget.lastNews.path,
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          const Padding(padding: EdgeInsets.only(bottom: 100)),
+          const SizedBox(height: 20),
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: grisMoyen,
+              borderRadius: BorderRadius.circular(5.0),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black,
+                  offset: Offset(1, 1),
+                  blurRadius: 3.0,
+                ),
+              ],
+            ),
+            child: Text(
+              widget.lastNews.date,
+              style: const TextStyle(color: Colors.white, fontSize: 20),
+            ),
+          ),
+          const SizedBox(height: 20),
           Text(
             widget.lastNews.name,
             style: const TextStyle(
@@ -38,7 +59,7 @@ class _EventWidgetState extends State<LastNewsWidget> {
                 fontWeight: FontWeight.bold,
                 fontSize: 40),
           ),
-          const Padding(padding: EdgeInsets.only(bottom: 60)),
+          const SizedBox(height: 60),
           SizedBox(
             width: widget.size.width * 0.8,
             child: Text(
