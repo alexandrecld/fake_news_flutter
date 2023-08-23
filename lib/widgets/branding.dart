@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../models/responsive.dart';
 
 class Branding extends StatelessWidget {
@@ -8,12 +7,10 @@ class Branding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ScreenSize screenSize = Responsive().getScreenSize(context);
-    String title =
-    (screenSize == ScreenSize.small) ? "Fake News" : "Fake News II";
+    String title = "";
 
     return Row(
       children: [
-        Image.asset(, width: 40, height: 40),
         Text(
           title,
           style: const TextStyle(

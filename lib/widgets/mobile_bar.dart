@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-
+import '../constantes.dart';
 import 'branding.dart';
 
-class PhoneBar extends AppBar {
-  PhoneBar({super.key})
+class MobileBar extends AppBar {
+  MobileBar({super.key})
       : super(
-    title: const Branding(),
-    centerTitle: true,
-    backgroundColor: pinkColor,
-  );
+          title: const Branding(),
+          centerTitle: true,
+          backgroundColor: whiteColor,
+        );
 }

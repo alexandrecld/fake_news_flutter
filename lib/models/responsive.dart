@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 
-enum ScreenSize {
-  small,
-  medium,
-  large,
-}
-
 class Responsive {
   double minPoint = 640;
   double maxPoint = 1024;
@@ -20,4 +14,10 @@ class Responsive {
       return ScreenSize.medium;
     }
   }
+}
+
+enum ScreenSize {
+  small,
+  medium,
+  large,
 }
