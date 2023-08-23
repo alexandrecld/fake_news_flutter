@@ -24,7 +24,6 @@ List<ButtonObject> menuButton = [
   ButtonObject(text: "Rouages", icon: Icons.settings, destination: const MainPage()),
 ];
 
-
 List<HoverButton> menuButtonHover() =>
     menuButton.map((button) => HoverButton(buttonObject: button)).toList();
 
