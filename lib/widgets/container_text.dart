@@ -37,10 +37,11 @@ class ContainerText extends StatelessWidget {
               ),
               const SizedBox(height: 140),
               const UppercaseText(
-                "Il revient et il est pas content ! \n mythoné en php et mysql",
+                "Il revient et il est pas content ! \n mythoné en php et mysql.",
                 style: TextStyle(
                   color: Colors.black45,
-                  fontSize: 30,
+                  fontSize: 20,
+                  letterSpacing: 3,
                 ),
                 textAlign: TextAlign.center,
               ),
