@@ -4,7 +4,7 @@ import '../constantes.dart';
 import 'branding.dart';
 
 class WebBar extends PreferredSize {
-  Size size;
+  final Size size;
 
   WebBar({super.key, required this.size})
       : super(

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fake_news/constantes.dart';
 import '../models/responsive.dart';
 import '../widgets/last_news_widget.dart';
-import '../widgets/title_text.dart';
 
 class LastNewsSection extends StatelessWidget {
   const LastNewsSection({super.key});

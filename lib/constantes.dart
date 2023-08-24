@@ -1,4 +1,3 @@
-import 'package:fake_news/sections/contact_section.dart';
 import 'package:fake_news/widgets/url_button.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_news/pages/main_page.dart';

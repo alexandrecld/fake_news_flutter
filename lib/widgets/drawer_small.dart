@@ -18,7 +18,7 @@ class DrawerSmall extends StatelessWidget {
             } else {
               ButtonObject buttonObject = menuButton[index - 1];
               return ListTile(
-                title: Text(buttonObject.text ?? ""),
+                title: Text(buttonObject.text),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.push(
